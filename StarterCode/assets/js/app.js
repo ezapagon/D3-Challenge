@@ -28,3 +28,16 @@ d3.csv("data.csv", function(data){
 }).then(function(data) {
     console.log(data);
 
+// Create scales
+var xScale = d3.scaleLinear()
+    .domain([8, d3.max(data,function(d){
+    return +d.poverty;
+    })])
+    .range([0, width]);
+
+var yScale = d3.scaleLinear()
+    .domain([2, d3.max(data,function(d){
+    return +d.healthcare;
+    })])
+    .range([height, 0]);
+  
