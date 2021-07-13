@@ -1,10 +1,14 @@
 // @TODO: YOUR CODE HERE!
-var Width = 800;
-var Height = 560;
+var Width = 700;
+var Height = 680;
 
 var margin = {
-    top: 20,
-    right: 40,
-    bottom: 80,
-    left: 50
+    top: 30,
+    right: 50,
+    bottom: 90,
+    left: 60
 };
+
+var w = Width - margin.left - margin.right;
+var he = Height - margin.top - margin.bottom;
+
