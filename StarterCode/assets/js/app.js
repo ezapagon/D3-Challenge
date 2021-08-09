@@ -22,8 +22,7 @@ var svg = d3
     .append("svg")
     .attr("width", Width)
     .attr("height", Height);
-    .attr("class", "chart");
-
+    
 svg.append("g").attr("class", "xText");
 
 var xText = d3.select(".xText");
