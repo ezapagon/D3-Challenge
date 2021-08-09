@@ -1,6 +1,8 @@
-// @TODO: YOUR CODE HERE!
-var Width = 700;
-var Height = 680;
+
+
+var width = parseInt(d3.select("#scatter").style("width"));
+
+var height = width - width/3.9;
 
 var margin = {
     top: 30,
@@ -9,8 +11,11 @@ var margin = {
     left: 60
 };
 
-var w = Width - margin.left - margin.right;
-var he = Height - margin.top - margin.bottom;
+
+var labelArea = 110;
+var tPadBot = 40;
+var tPadLeft = 40;
+
 
 var svg = d3
     .select("#scatter")
