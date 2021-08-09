@@ -22,9 +22,51 @@ var svg = d3
     .append("svg")
     .attr("width", Width)
     .attr("height", Height);
+    .attr("class", "chart");
 
-var chart = svg.append("g")
-    .attr("transform", 'translate(${margin.left}, ${margin.top})');
+
+
+
+svg.append("g").attr("class", "xText");
+
+var xText = d3.select(".xText");
+
+function xTextRefresh() {
+    xText.attr(
+      "transform",
+      "translate(" +
+        ((width - labelArea) / 2 + labelArea) +
+        ", " +
+        (height - margin - tPadBot) +
+        ")"
+    );
+  }
+  xTextRefresh();
+
+  xText
+  .append("text")
+  .attr("y", -26)
+  .attr("data-name", "poverty")
+  .attr("data-axis", "x")
+  .attr("class", "aText active x")
+  .text("In Poverty (%)");
+
+xText
+  .append("text")
+  .attr("y", 0)
+  .attr("data-name", "age")
+  .attr("data-axis", "x")
+  .attr("class", "aText inactive x")
+  .text("Age (Median)");
+
+xText
+  .append("text")
+  .attr("y", 26)
+  .attr("data-name", "income")
+  .attr("data-axis", "x")
+  .attr("class", "aText inactive x")
+  .text("Household Income (Median)");
+
 
 d3.csv("data.csv", function(data){
     data.poverty = +data.poverty;
