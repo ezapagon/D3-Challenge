@@ -24,9 +24,6 @@ var svg = d3
     .attr("height", Height);
     .attr("class", "chart");
 
-
-
-
 svg.append("g").attr("class", "xText");
 
 var xText = d3.select(".xText");
