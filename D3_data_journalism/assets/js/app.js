@@ -15,7 +15,7 @@ var svg = d3
 .select("#scatter")
 .append("svg")
 .attr("width", Width)
-.attr("height", Height);
+.attr("height", Height)
 
 // radius for each that will show up in the graph.
 var circRadius;
@@ -44,8 +44,7 @@ function xTextRefresh() {
     );
   }
   xTextRefresh();
-  //xText to append 
-  //Poverty
+
   xText
   .append("text")
   .attr("y", -26)
@@ -53,7 +52,7 @@ function xTextRefresh() {
   .attr("data-axis", "x")
   .attr("class", "aText active x")
   .text("In Poverty (%)");
- //Age
+
  xText
   .append("text")
   .attr("y", 0)
