@@ -12,10 +12,10 @@ var tPadLeft = 40;
 
 //Create the canvas
 var svg = d3
-    .select("#scatter")
-    .append("svg")
-    .attr("width", Width)
-    .attr("height", Height);
+.select("#scatter")
+.append("svg")
+.attr("width", Width)
+.attr("height", Height);
 
 // radius for each that will show up in the graph.
 var circRadius;
