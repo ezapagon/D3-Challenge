@@ -1,7 +1,5 @@
-// @TODO: YOUR CODE HERE!
-// Grab the width of the containing box
+// @TODO: YOUR CODE HERE!!!!
 var width = parseInt(d3.select("#scatter").style("width"));
-
 var height = width - width/3.9;
 
 // Define the Margin,Space and padding
@@ -12,10 +10,10 @@ var tPadLeft = 40;
 
 //Create the canvas
 var svg = d3
-.select("#scatter")
-.append("svg")
-.attr("width", Width)
-.attr("height", Height)
+  .select("#scatter")
+  .append("svg")
+  .attr("width",Width)
+  .attr("height",Height)
 
 // radius for each that will show up in the graph.
 var circRadius;
@@ -60,8 +58,8 @@ function xTextRefresh() {
   .attr("data-axis", "x")
   .attr("class", "aText inactive x")
   .text("Age (Median)");
- //Income
- xText
+
+  xText
   .append("text")
   .attr("y", 26)
   .attr("data-name", "income")
@@ -76,7 +74,7 @@ svg.append("g").attr("class", "yText");
 
 var yText = d3.select(".yText");
 
-//To change the text easily 
+
 function yTextRefresh() {
   yText.attr(
     "transform",
