@@ -2,20 +2,17 @@
 var width = parseInt(d3.select("#scatter").style("width"));
 var height = width - width/3.9;
 
-// Define the Margin,Space and padding
 var margin = 20;
 var labelArea = 110;
 var tPadBot = 40;
 var tPadLeft = 40;
 
-//Create the canvas
 var svg = d3
   .select("#scatter")
   .append("svg")
   .attr("width",width)
   .attr("height",height)
 
-// radius for each that will show up in the graph.
 var circRadius;
 function crGet() {
   if (width <= 530) {
@@ -271,13 +268,14 @@ function visualize(theData) {
         
       toolTip.show(d);
        
-      d3.select("." + d.abbr).style("stroke", "#323232");
+      d3.select("." + d.abbr).style("stroke","#323232");
     })
+    
     .on("mouseout", function(d) {
         
       toolTip.hide(d);
         
-      d3.select("." + d.abbr).style("stroke", "#e3e3e3");
+      d3.select("." + d.abbr).style("stroke","#e3e3e3");
     });
   
   
