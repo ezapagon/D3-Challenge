@@ -12,8 +12,8 @@ var tPadLeft = 40;
 var svg = d3
   .select("#scatter")
   .append("svg")
-  .attr("width",Width)
-  .attr("height",Height)
+  .attr("width",width)
+  .attr("height",height)
 
 // radius for each that will show up in the graph.
 var circRadius;
